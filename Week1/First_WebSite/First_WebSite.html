@@ -1,0 +1,163 @@
+<!-- filepath: c:\Users\caplo\Sites\PatikaFrontEnd\Week1\First_WebSite\First_WebSite.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yılmaz ÇINAR - Kişisel Web Sayfası</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3; /* Mavi tonu başlıklar */
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 40px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        img {
+            max-width: 200px; /* Resim boyutunu sınırla */
+            height: auto;
+            display: block; /* Ortalamak için */
+            margin: 15px auto; /* Ortala */
+            border-radius: 50%; /* Yuvarlak resim */
+            border: 3px solid #ddd;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yılmaz ÇINAR</h1>
+
+        <section id="ozgecmis">
+            <h2>Özgeçmiş</h2>
+            <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Kedi"> <!-- Resim yolunu kendi resminizle değiştirin -->
+            <p>
+                Merhaba! Ben [Adınız Soyadınız]. [Mesleğiniz veya Alanınız] alanında tutkulu bir [Öğrenci/Profesyonel/vb.].
+                Bu sayfada kendim, eğitimim, deneyimlerim ve yeteneklerim hakkında daha fazla bilgi bulabilirsiniz.
+                [Kendiniz hakkında eklemek istediğiniz birkaç cümle daha].
+            </p>
+        </section>
+
+        <section id="egitim">
+            <h2>Eğitim</h2>
+            <ol>
+                <li>
+                    <strong>[Üniversite Adı]</strong> - [Bölüm Adı] ([Başlangıç Yılı] - [Bitiş Yılı/Devam Ediyor])
+                    <p>Burada aldığınız önemli dersler veya projeler hakkında kısa bilgi.</p>
+                </li>
+                <li>
+                    <strong>[Lise Adı]</strong> - [Alan] ([Başlangıç Yılı] - [Bitiş Yılı])
+                </li>
+                <li>
+                    <strong>[Varsa Diğer Eğitimler/Kurslar]</strong>
+                </li>
+            </ol>
+        </section>
+
+        <section id="deneyim">
+            <h2>İş Deneyimi</h2>
+            <ol>
+                <li>
+                    <strong>[Şirket Adı]</strong> - [Pozisyon] ([Başlangıç Tarihi] - [Bitiş Tarihi/Halen])
+                    <p>Buradaki sorumluluklarınız ve başarılarınız hakkında kısa bilgi.</p>
+                </li>
+                <li>
+                    <strong>[Varsa Diğer İş Deneyimi]</strong>
+                </li>
+                <li>
+                    <strong>[Varsa Staj Deneyimi]</strong>
+                </li>
+            </ol>
+        </section>
+
+        <section id="yetenekler">
+            <h2>Yetenekler</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>[Başka Bir Teknik Yetenek]</li>
+                <li>[Bir Sosyal Yetenek, örn: Takım Çalışması]</li>
+                <li>[Yabancı Dil]</li>
+            </ul>
+        </section>
+
+         <section id="hobiler">
+            <h2>Hobiler</h2>
+            <ul>
+                <li>Kitap Okumak</li>
+                <li>[Başka Bir Hobi]</li>
+                <li>[Başka Bir Hobi]</li>
+            </ul>
+        </section>
+
+        <section id="iletisim">
+            <h2>İletişim ve Bağlantılar</h2>
+            <p>Bana aşağıdaki platformlardan ulaşabilirsiniz:</p>
+            <ul>
+                <li><a href="mailto:email@adresiniz.com">E-posta Gönder</a></li>
+                <li><a href="[LinkedIn Profil Linkiniz]" target="_blank">LinkedIn Profilim</a></li>
+                <li><a href="[GitHub Profil Linkiniz]" target="_blank">GitHub Profilim</a></li>
+                <li><a href="[Başka Bir Sosyal Medya/Web Sitesi Linki]" target="_blank">[Site Adı]</a></li>
+            </ul>
+        </section>
+
+        <section id="konum">
+            <h2>Konumum</h2>
+            <p>Aşağıda genel konumumu görebilirsiniz:</p>
+            <!-- Google Maps'ten kendi konumunuzun iframe kodunu buraya yapıştırın -->
+            <!-- Örnek iframe kodu (İstanbul): -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.03381178418!2d28.97480711540699!3d41.0151370793008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9e7a77f6c7b%3A0x6c0c6b8f8b1f6c7b!2sIstanbul%2C%20Turkey!5e0!3m2!1sen!2str!4v1678886543210!5m2!1sen!2str"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </div>
+</body>
+</html>
