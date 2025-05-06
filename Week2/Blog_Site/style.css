@@ -1,0 +1,55 @@
+.navbar-brand {
+    
+    font-weight: bold;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.blog-posts {
+    margin: 20px;
+}
+
+.post-summary {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.post-summary h2 {
+    font-size: 24px;
+}
+
+.post-summary p {
+    font-size: 16px;
+}
+
+.post-summary a {
+    color: #333;
+    text-decoration: none;
+}
+
+.post-summary a:hover {
+    text-decoration: underline;
+}
+
+header {
+    
+    text-align: center;
+}
