@@ -1,0 +1,308 @@
+/* To-Do List Uygulaması CSS */
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo-container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+h1 i {
+    color: #667eea;
+    margin-right: 10px;
+}
+
+/* Görev Ekleme Formu */
+.add-task-form {
+    position: relative;
+}
+
+#taskInput {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#taskInput:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+#addTaskBtn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#addTaskBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Filtre Butonları */
+.filter-buttons .btn {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.filter-buttons .btn.active {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+}
+
+/* Görev Listesi */
+.task-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.task-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.task-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
+}
+
+.task-item {
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.task-item:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed {
+    background: #d4edda;
+    opacity: 0.8;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.task-checkbox {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    accent-color: #667eea;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+    word-break: break-word;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background: #ffc107;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #ffca2c;
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #e4606d;
+    transform: scale(1.05);
+}
+
+/* Boş Liste Mesajı */
+#emptyMessage {
+    display: none;
+}
+
+#emptyMessage i {
+    color: #6c757d;
+}
+
+/* Temizleme Butonu */
+#clearCompletedBtn {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#clearCompletedBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .todo-container {
+        margin: 10px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    .filter-buttons .btn {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    
+    .task-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+/* Düzenleme Modu */
+.task-item.editing .task-text {
+    display: none;
+}
+
+.task-item .edit-input {
+    display: none;
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 2px solid #667eea;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.task-item.editing .edit-input {
+    display: block;
+}
+
+/* Hata Mesajı */
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.invalid-feedback.show {
+    display: block;
+}
+
+/* Gece Modu için Hazırlık */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    }
+    
+    .todo-container {
+        background: #2c3e50;
+        color: white;
+    }
+    
+    .task-item {
+        background: #34495e;
+        color: white;
+    }
+    
+    .task-item:hover {
+        background: #3a5470;
+    }
+    
+    #taskInput {
+        background: #34495e;
+        color: white;
+        border-color: #4a5f7a;
+    }
+}
