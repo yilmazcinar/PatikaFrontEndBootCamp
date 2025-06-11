@@ -1,0 +1,820 @@
+@import "./utils.css";
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "./section/bmi.css";
+@import "./section/class.css";
+@import "./section/contact.css";
+@import "./section/hero.css";
+@import "./section/purchase.css";
+@import "./section/review.css";
+@import "./section/stat.css";
+@import "./section/trainer.css";
+
+/* STARTER PACK */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  background-color: var(--bg-primary-color);
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 1rem 0;
+  color: var(--text-color-3);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: var(--btn-color-1);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: var(--text-color-2);
+}
+
+/* JOIN US Button - Override all nav styles */
+.btn-join {
+  background: linear-gradient(135deg, var(--btn-color-1), #e67e22) !important;
+  color: white !important;
+  padding: 12px 28px !important;
+  border-radius: 30px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 1.4rem !important;
+  letter-spacing: 1px !important;
+  box-shadow: 0 4px 15px rgba(243, 156, 17, 0.3) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+/* Completely override any nav link styles */
+.nav-menu .btn-join,
+.nav-menu a.btn-join {
+  background: linear-gradient(135deg, var(--btn-color-1), #e67e22) !important;
+  color: white !important;
+  padding: 12px 28px !important;
+  border-radius: 30px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 1.4rem !important;
+  letter-spacing: 1px !important;
+  box-shadow: 0 4px 15px rgba(243, 156, 17, 0.3) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+/* Prevent any pseudo-elements on JOIN US button */
+.btn-join::after,
+.btn-join::before {
+  display: block !important;
+}
+
+.nav-menu .btn-join::after {
+  display: none !important;
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: none !important;
+}
+
+/* JOIN US Button Pulse Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(243, 156, 17, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(243, 156, 17, 0.5);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(243, 156, 17, 0.3);
+  }
+}
+
+.btn-join i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Remove slide effect completely */
+.btn-join::before {
+  display: none !important;
+  content: none !important;
+}
+
+.btn-join::after {
+  display: none !important;
+}
+
+/* JOIN US Button Hover Effects - No slide effect */
+.btn-join:hover,
+.nav-menu .btn-join:hover,
+.nav-menu a.btn-join:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(243, 156, 17, 0.4) !important;
+  color: white !important;
+  background: linear-gradient(135deg, #e67e22, var(--btn-color-1)) !important;
+  text-decoration: none !important;
+}
+
+.btn-join:hover::after,
+.nav-menu .btn-join:hover::after {
+  display: none !important;
+  width: 0 !important;
+  content: none !important;
+}
+
+.btn-join:active,
+.nav-menu .btn-join:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 4px 15px rgba(243, 156, 17, 0.3) !important;
+}
+
+/* NAVIGATION */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+  padding: 15px 0;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: var(--text-color-2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled .logo img {
+  height: 35px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Navigation Links - Exclude JOIN US button and ensure clean Contact link */
+.nav-menu a:not(.btn-join) {
+  color: white;
+  font-weight: 500;
+  padding: 10px 0;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.nav-menu a:not(.btn-join):hover {
+  color: var(--btn-color-1);
+  text-decoration: none !important;
+}
+
+/* Only show underline effect for regular nav links, not Contact */
+.nav-menu a:not(.btn-join):not([href="#contact"])::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--btn-color-1);
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:not(.btn-join):not([href="#contact"]):hover::after {
+  width: 100%;
+}
+
+/* Special styling for Contact link to prevent orange rectangle */
+.nav-menu a[href="#contact"] {
+  color: white !important;
+  font-weight: 500;
+  padding: 10px 0;
+  position: relative;
+  text-decoration: none !important;
+  background: none !important;
+  border: none !important;
+}
+
+.nav-menu a[href="#contact"]:hover {
+  color: var(--btn-color-1) !important;
+  text-decoration: none !important;
+  background: none !important;
+  border: none !important;
+}
+
+.nav-menu a[href="#contact"]::after,
+.nav-menu a[href="#contact"]::before {
+  display: none !important;
+}
+
+/* SECTION HEADERS */
+.section-header {
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-color-2);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--btn-color-1);
+}
+
+.section-header p {
+  font-size: 1.6rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--text-color-3);
+}
+
+/* Remove old name-overlay and trainer-info styles */
+
+/* FOOTER */
+.footer {
+  background-color: var(--text-color-2);
+  color: white;
+  padding: 60px 0 30px;
+}
+
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+}
+
+.footer-logo img {
+  height: 40px;
+  margin-bottom: 25px;
+}
+
+.footer-logo p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-column h4 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: var(--btn-color-1);
+}
+
+/* MOBILE MENU */
+.mobile-menu-btn {
+  display: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  color: var(--btn-color-1);
+}
+
+.mobile-menu-btn i {
+  transition: transform 0.3s ease;
+}
+
+.nav-menu.active ~ .mobile-menu-btn i {
+  transform: rotate(90deg);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 4.5rem;
+  }
+
+  .stats-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .classes-content,
+  .bmi-wrapper,
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .purchase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* NAVIGATION */
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: var(--text-color-2);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin: 15px 0;
+  }
+
+  .nav-menu a {
+    font-size: 1.8rem;
+    padding: 15px 30px;
+  }
+
+  .btn-join {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    padding: 10px 24px;
+    border-radius: 25px;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .classes-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trainers-grid,
+  .purchase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+/* RESPONSIVE DESIGN - 576px and below */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  /* HERO SECTION */
+  .hero-text h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .brand-tag {
+    font-size: 1.2rem;
+    padding: 6px 15px;
+    margin-bottom: 20px;
+  }
+
+  /* SECTIONS PADDING */
+  .stats-section,
+  .classes-section,
+  .bmi-section,
+  .trainers-section,
+  .purchase-section,
+  .review-section,
+  .contact-section {
+    padding: 50px 0;
+  }
+
+  /* SECTION HEADERS */
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* STATS */
+  .stats-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-item h3 {
+    font-size: 3rem;
+  }
+
+  .stat-item p {
+    font-size: 1.4rem;
+  }
+
+  /* CLASSES */
+  .classes-tabs {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .tab-btn {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .classes-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .class-info h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .class-info p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .schedule p {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .class-image img {
+    height: 250px;
+  }
+
+  /* BMI SECTION */
+  .bmi-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .bmi-calculator h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .bmi-calculator p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-input {
+    padding: 12px 15px;
+    font-size: 1.4rem;
+  }
+
+  /* TRAINERS */
+  .trainers-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .trainer-card img {
+    height: 250px;
+  }
+
+  .trainer-info {
+    padding: 20px;
+  }
+
+  .trainer-info h4 {
+    font-size: 1.8rem;
+  }
+
+  .trainer-info p {
+    font-size: 1.3rem;
+  }
+
+  /* PURCHASE */
+  .purchase-section {
+    padding: 50px 0;
+  }
+
+  .purchase-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .purchase-card img {
+    height: 180px;
+  }
+
+  .purchase-info {
+    padding: 15px;
+  }
+
+  .purchase-info h4 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .price {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .purchase-actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .purchase-actions .btn {
+    font-size: 1.1rem;
+    padding: 6px 12px;
+  }
+
+  /* REVIEWS */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .review-card {
+    padding: 25px;
+  }
+
+  .review-header {
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .review-header img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .client-info h4 {
+    font-size: 1.6rem;
+  }
+
+  .client-info p {
+    font-size: 1.3rem;
+  }
+
+  .review-card > p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+
+  /* CONTACT */
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-item {
+    margin-bottom: 25px;
+  }
+
+  .contact-item h4 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .contact-item p {
+    font-size: 1.4rem;
+  }
+
+  .contact-form-section h4 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    gap: 15px;
+  }
+
+  textarea.form-input {
+    min-height: 100px;
+  }
+
+  .contact-map iframe {
+    height: 300px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-logo img {
+    height: 35px;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-column h4 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-column ul li a {
+    font-size: 1.4rem;
+  }
+}

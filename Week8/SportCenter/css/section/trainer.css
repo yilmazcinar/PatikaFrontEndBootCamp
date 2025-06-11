@@ -1,0 +1,136 @@
+/* TRAINERS SECTION */
+.trainers-section {
+  padding: 100px 0;
+  background-color: var(--bg-primary-color);
+}
+
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.trainer-info {
+  padding: 25px;
+  text-align: center;
+}
+
+.trainer-info h4 {
+  font-size: 2rem;
+  color: var(--text-color-2);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.trainer-info p {
+  font-size: 1.4rem;
+  color: var(--text-color-3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* TRAINER CARDS - Full Image Cards with Hover Overlay */
+.trainer-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 400px;
+}
+
+/* Orange border on hover */
+.trainer-card:hover {
+  border: 3px solid var(--btn-color-1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(243, 156, 17, 0.3);
+}
+
+/* Blue corner borders */
+.trainer-card::before,
+.trainer-card::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border: 4px solid #4a90e2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.trainer-card::before {
+  top: -4px;
+  left: -4px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.trainer-card::after {
+  bottom: -4px;
+  right: -4px;
+  border-left: none;
+  border-top: none;
+}
+
+.trainer-card:hover::before,
+.trainer-card:hover::after {
+  opacity: 1;
+}
+
+.trainer-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.trainer-card:hover img {
+  transform: scale(1.02);
+  filter: brightness(0.6);
+}
+
+/* Trainer Info Overlay - Shows name and role on hover */
+.trainer-card .trainer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.trainer-card:hover .trainer-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.trainer-overlay h4 {
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.trainer-overlay p {
+  color: var(--btn-color-1);
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-align: center;
+}
