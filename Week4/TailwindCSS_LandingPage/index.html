@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>tailwindcss_LandingPage</title>
+</head>
+
+<body class="bg-stone-200  my-4">
+    <header class="container mx-auto pb-4 px-15">
+        <nav class="bg-white border-gray-200 rounded-xl mt-4">
+            <div class="flex items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="https://placehold.co/150x150/7008e7/fff?text=C" class="h-8 rounded-lg" alt="Logo" />
+                </a>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                    <ul
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white items-center">
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                                aria-current="page">Link</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                                aria-current="page">Link</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Link</a>
+                        </li>
+                        <button type="button"
+                            class="text-white bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Sing
+                            Up</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-15 flex flex-row gap-6 mt-2 mb-8 h-155">
+        <div class="w-lg p-8 bg-white p-8 border border-gray-200 rounded-xl text-center">
+            <div class="p-8">
+                <p class="text-violet-700 text-sm font-semibold mb-2">Mamba design system</p>
+                <h2 class="text-6xl font-bold text-gray-900 mb-8">Build it with Mamba</h2>
+                <p class="text-gray-700 text-base mb-6">
+                    Modular and versatile. The ultimate design toolkit for savvy technology startups.
+                </p>
+                <div class="space-y-3">
+                    <input type="text"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-sm"
+                        placeholder="Your name">
+                    <input type="email"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-sm"
+                        placeholder="Email address">
+                    <button
+                        class="w-full bg-violet-700 text-white rounded-md py-3 font-semibold hover:bg-violet-800 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-1 text-sm">Join
+                        the waitlist</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-5xl basis-auto bg-white border border-gray-200 rounded-xl">
+            <img src="https://placehold.co/15000x15000/7008e7/fff?text=resim"
+                class="w-full h-full object-cover rounded-xl" alt="Resim" />
+        </div>
+    </main>
+
+    <section class="text-center mb-8">
+        <p class="text-violet-700 text-sm font-semibold mb-2">HOW IT WORKS</p>
+        <h2 class="text-6xl font-bold text-gray-900 mb-8">Build it with Mamba is simple</h2>
+    </section>
+
+    <section class="container mx-auto px-15 flex flex-row gap-6 mt-2 mb-8 h-60">
+        <div class="w-lg basis-auto bg-white border border-gray-200 rounded-xl p-8">
+            <div
+                class="w-10 h-10 rounded-full bg-violet-700 text-white flex items-center justify-center font-bold text-lg mb-4">
+                1</div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-1"><span class="font-bold">Nulla</span>. Nostrum,
+                corrupti
+                <br>blanditiis. Illum, architecto?
+            </h3>
+        </div>
+
+        <div class="w-lg basis-auto bg-white border border-gray-200 rounded-xl p-8">
+            <div
+                class="w-10 h-10 rounded-full bg-violet-700 text-white flex items-center justify-center font-bold text-lg mb-4">
+                2</div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-1"><span class="font-bold">Accusantium</span>. Vitae
+                saepe
+                <br>atque neque sunt eius dolor veniam alias debitis?
+            </h3>
+        </div>
+
+        <div class="w-lg basis-auto bg-white border border-gray-200 rounded-xl p-8">
+            <div
+                class="w-10 h-10 rounded-full bg-violet-700 text-white flex items-center justify-center font-bold text-lg mb-4">
+                3</div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-1"><span class="font-bold">Maxime</span>. Expedita
+                temporibus
+                <br>culpa reprehenderit doloribus<br> consectetur odio!
+            </h3>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-15 flex flex-row gap-6 mt-15 mb-8 h-90">
+        <div class="w-5xl basis-auto bg-white border border-gray-200 rounded-xl">
+            <img src="https://placehold.co/15000x15000/7008e7/fff?text=resim"
+                class="w-full h-full object-cover rounded-xl" alt="Logo" />
+        </div>
+
+        <div class="w-5xl basis-auto bg-white border border-gray-200 rounded-xl">
+
+            <div class="p-8">
+                <div class="flex justify-center mb-4">
+                    <div class="rounded-full w-16 h-16 bg-gray-300 flex items-center justify-center mb-3">
+                        <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.997a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <p class="mt-2 text-gray-500 italic text-center font-semibold mb-10">
+                    "Et, dignissimos obcaecati. Recusandae praesentium <br> doloribus vitae? Rem unde atque mollitia!"
+                </p>
+                <div class="mt-4 text-center">
+                    <p class="text-gray-900 font-semibold">Leeroy Jenkins</p>
+                    <p class="text-gray-500 text-sm">CEO of Company Co.</p>
+                </div>
+                <div class="flex justify-center mt-6 space-x-2">
+                    <span class="block w-2 h-2 bg-gray-800 rounded-full"></span>
+                    <span class="block w-2 h-2 bg-gray-400 rounded-full"></span>
+                    <span class="block w-2 h-2 bg-gray-400 rounded-full"></span>
+                    <span class="block w-2 h-2 bg-gray-400 rounded-full"></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container mx-auto px-15 flex flex-row gap-6 mt-15 mb-8 h-60">
+        <div class="basis-auto bg-white rounded-xl p-10 pt-13">
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">
+                Create with us
+            </h2>
+            <p class="text-gray-600 text-lg">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt facilis quod accusantium beatae cum
+                nam adipisci reiciendis omnis possimus error quo animi voluptas magni, at incidunt. Nulla ex at ullam
+                corporis quidem adipisci vitae, perferendis dolorem libero minus atque tenetur enim pariatur cupiditate
+                commodi in beatae, ipsa eligendi? Quis, saepe.
+            </p>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-15 flex flex-row mt-15 mb-8 h-100">
+        <div class="w-5xl basis-auto bg-white rounded-l-xl">
+            <img src="https://placehold.co/15000x15000/7008e7/fff?text=resim"
+                class="w-full h-full object-cover rounded-l-xl" alt="Logo" />
+        </div>
+
+        <div class="w-2xl basis-auto bg-white rounded-r-xl p-10 py-8">
+            <div
+                class="w-fit px-4 py-1 rounded-full bg-violet-700 text-white flex justify-center font-semibold text-lg">
+                Business
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4 mt-8">
+                Curating a workplace that insprise team movement
+            </h2>
+            <p class="text-gray-900 text-lg mt-30">
+                November 30, 2020
+                <br>
+                By Leroy Jenkins
+            </p>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-15 flex flex-row gap-6 mt-2 mb-8 h-40">
+        <div class="w-lg basis-auto bg-white pt-12 rounded-xl p-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-1">
+                <span class="font-bold">Panel-based blocks.</span>
+                Flexible panel that are prefect for building functional layouts.
+            </h3>
+        </div>
+
+        <div class="w-lg basis-auto bg-white pt-12 rounded-xl p-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-1">
+                <span class="font-bold">Responsive design.</span>
+                Panels look great no matter the device.
+            </h3>
+        </div>
+
+        <div class="w-lg basis-auto bg-white pt-12 rounded-xl p-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-1">
+                <span class="font-bold">Premium support.</span>
+                Join over 50 000 satisfied customers who use our templates
+            </h3>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-15 mt-15 mb-8">
+        <div class="w-full bg-white rounded-xl p-10 text-center">
+            <h2 class="text-5xl font-bold text-gray-800 mb-4 mt-20">
+                Our team is here to help you.
+            </h2>
+            <p class="text-gray-600 text-lg"></p>
+            Meet our crew >
+            </p>
+            <div class="w-full h-100 mt-20 mb-15">
+                <img src="https://placehold.co/15000x15000/7008e7/fff?text=resim"
+                    class="w-full h-full object-cover rounded" alt="Logo" />
+            </div>
+        </div>
+    </section>
+
+    <footer class="container mx-auto pb-4 px-15">
+        <div class="bg-white flex items-center justify-between h-25 p-4 rounded-xl">
+            <div class="text-gray-800 font-bold text-lg">
+                Mamba
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

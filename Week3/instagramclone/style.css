@@ -1,0 +1,339 @@
+::placeholder {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    background-position: 40%;
+    background-size: 6%;
+    background: url(./assets/search-solid.svg);
+    background-repeat: no-repeat;
+}
+
+input.empty {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    background-color: #FAFAFA;
+}
+
+.postuserfont {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    color: black;
+}
+
+
+.storyphoto {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid rgb(238, 39, 82);
+    margin-right: 7px;
+}
+
+.storytext {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: black;
+}
+
+.rightpanellinks {
+    text-decoration: none;
+    color: lightgrey;
+}
+
+.rightpanellinks:hover {
+    text-decoration: none;
+    color: lightgrey;
+}
+
+.logo {
+    margin-left: 192px;
+}
+
+.navbar-nav {
+    margin-right: 192px;
+}
+
+.search-box {
+    margin-left: 5rem;
+}
+
+/* style.css */
+@media (max-width: 575.98px) {
+
+    /* Navbar toggler'ı sağa al */
+    .navbar-toggler {
+        margin-left: auto;
+    }
+
+    /* Mobile menü stilleri */
+    #mobileMenu {
+        background-color: white;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+    }
+}
+
+/* style.css dosyasına ekleyin */
+.middlearea {
+    padding-top: 84px;
+    /* Navbar yüksekliği için zaten var */
+    margin-top: 0.5rem !important;
+    /* mt-2 ≈ 0.5rem */
+}
+
+/* İçerik genişliğini sabitlemek için */
+.col-6.offset-3 {
+    max-width: 614px;
+    /* Instagram'ın gerçek gönderi genişliği */
+    margin: 0 auto;
+    /* Ortalama */
+}
+
+.card-body .storyphoto {
+    max-height: 200px !important;
+}
+
+/* style.css */
+.col-12.col-sm-6 {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    /* Ortalama için */
+}
+
+/* Mobilde (col-12) padding ekleme */
+@media (max-width: 575.98px) {
+    .col-12 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Hikaye konteynırı */
+.story-item {
+    display: inline-block;
+    /* Yatay sıralama için */
+    width: 80px;
+    /* Sabit genişlik */
+    margin-bottom: 10px;
+    /* Alt boşluk */
+}
+
+/* Resim stilleri (mevcut stil korunur) */
+.storyphoto {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid rgb(238, 39, 82);
+    display: block;
+    /* Resmi blok yapıyoruz */
+    margin: 0 auto;
+    /* Ortalama */
+}
+
+/* Metin stilleri */
+.storytext {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: black;
+    white-space: nowrap;
+    /* Tek satırda kalması için */
+    overflow: hidden;
+    /* Taşan metni gizle */
+    text-overflow: ellipsis;
+    /* ... ile göster */
+    max-width: 100%;
+    /* Konteynır genişliğini aşmasın */
+}
+
+.card-body {
+    overflow-x: auto;
+    /* Yatay kaydırma */
+    white-space: nowrap;
+    /* Alt satıra geçmesin */
+    padding-bottom: 15px;
+    /* Kaydırma çubuğu için boşluk */
+}
+
+.story-item {
+    display: inline-block;
+    /* Yatay sıralama */
+    float: none;
+    /* Float etkisini kaldırır */
+}
+
+/* Üç nokta menüsü için */
+.card-header .fa-ellipsis-h {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.card-header .fa-ellipsis-h:hover {
+    opacity: 1;
+}
+
+/* style.css */
+.recommendations-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.see-all {
+    font-size: 12px;
+    font-weight: bold;
+    color: #262626;
+}
+
+/* Sağ panel sticky pozisyonu */
+.sticky-sidebar {
+    position: sticky;
+    top: 84px;
+    /* Navbar yüksekliği kadar */
+    height: calc(100vh - 84px);
+    overflow-y: auto;
+}
+
+/* Scrollbar gizleme */
+.sticky-sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Öneri kartları */
+.suggestion-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+/* Footer linkleri */
+.footer-links a {
+    color: #c7c7c7;
+    margin-right: 8px;
+    font-size: 11px;
+}
+
+/* style.css */
+.position-sticky {
+    align-self: flex-start;
+    /* Dikey hizalamayı düzeltir */
+    position: sticky;
+    top: 84px;
+    /* Navbar yüksekliği kadar aşağıda sabitler */
+    max-height: calc(100vh - 84px);
+    /* Viewport'tan navbar yüksekliğini çıkarır */
+    overflow-y: auto;
+    /* İçerik uzunsa kaydırma çubuğu çıkar */
+}
+
+.position-sticky::-webkit-scrollbar {
+    display: none;
+    /* Scrollbar'ı gizler (isteğe bağlı) */
+}
+
+/* style.css */
+.comment-section {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.comment-section::-webkit-scrollbar {
+    width: 4px;
+}
+
+.comment-section::-webkit-scrollbar-thumb {
+    background: #dbdbdb;
+    border-radius: 2px;
+}
+
+.navbar {
+    padding: 0 15px;
+    /* Yanlardan boşluk ekler */
+}
+
+.logo {
+    margin-left: 0;
+    /* Mevcut 192px'lik boşluğu kaldırır */
+}
+
+.search-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 216px;
+    /* Arama çubuğu genişliği */
+}
+
+/* Navbar container */
+.navbar>.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 975px;
+    /* Instagram'ın orijinal genişliği */
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* Logo stilleri */
+.logo {
+    margin-left: 0;
+    flex: 1 0 127px;
+}
+
+/* Arama kutusu */
+.search-box {
+    flex: 0 1 auto;
+    margin: 0 10px;
+}
+
+/* Nav ikonları */
+.navbar-nav {
+    flex: 1 0 127px;
+    justify-content: flex-end;
+    margin-right: 0;
+}
+
+/* Orta alan için container */
+.container.middlearea {
+    max-width: 935px;
+    margin: 0 auto;
+    padding-top: 84px;
+}
+
+/* Hikayeler ve gönderiler için genişlik */
+.col-12.col-sm-6.col-md-6.col-lg-6.col-xl-6 {
+    max-width: 614px;
+    padding-right: 28px;
+}
+
+/* Sağ panel için genişlik */
+.col-3.pl-1.position-sticky {
+    max-width: 293px;
+    padding-left: 28px;
+}
+
+/* Mobil görünüm için ayarlar */
+@media (max-width: 768px) {
+    .search-box {
+        display: none;
+    }
+
+    .navbar>.container {
+        padding: 0 10px;
+    }
+
+    .col-3.pl-1.position-sticky {
+        display: none;
+    }
+
+    .col-12.col-sm-6.col-md-6.col-lg-6.col-xl-6 {
+        padding-right: 0;
+        max-width: 100%;
+    }
+}
