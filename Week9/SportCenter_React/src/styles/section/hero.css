@@ -1,0 +1,60 @@
+/* HERO SECTION */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../images/hero-man.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.hero-content {
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.brand-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--btn-color-1);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.brand-tag i {
+  font-size: 1.2rem;
+}
+
+.hero-text h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.hero-text p {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}

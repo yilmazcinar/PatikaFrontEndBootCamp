@@ -1,0 +1,60 @@
+/* REVIEW SECTION */
+.review-section {
+  padding: 100px 0;
+  background-color: var(--bg-primary-color);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.review-card {
+  background-color: var(--bg-secondary-color);
+  padding: 40px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.review-card::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 30px;
+  font-size: 8rem;
+  color: var(--btn-color-1);
+  font-family: serif;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.review-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-info h4 {
+  font-size: 1.8rem;
+  color: var(--text-color-2);
+  font-weight: 600;
+}
+
+.client-info p {
+  font-size: 1.4rem;
+  color: var(--text-color-3);
+  margin: 0;
+}
+
+.review-card > p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-style: italic;
+}
