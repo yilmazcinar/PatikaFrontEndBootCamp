@@ -44,4 +44,4 @@ Uygulama, kullanıcılara 10 soruluk bir test sunar. Her soru için belirli bir 
 
 ## Canlı Link
 
-[Projenin canlı demosunu burada bulabilirsiniz.] (Henüz eklenmedi)
+https://transcendent-hamster-1d1e87.netlify.app/
